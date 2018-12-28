@@ -1,0 +1,219 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Amazon</title>
+
+    <!-- Favicon -->
+    {% load static %}
+    <link rel="icon" href='{% static "img/core-img/favicon.ico"%}'>
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href='{% static "style.css"%}'>
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #131415;
+   color: white;
+   text-align: center;
+   font-color:white;
+}
+</style>
+</head>
+
+<body>
+
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="palatin-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="palatinNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src='{% static "img/core-img/logo.png"%}' alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                <li><a href="/amazonapp/addorder">AddOrder</a></li>
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li><a href="blog.html">News</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mega Menu</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="rooms.html">Rooms</a></li>
+                                                <li><a href="blog.html">News</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="rooms.html">Rooms</a></li>
+                                                <li><a href="blog.html">News</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="rooms.html">Rooms</a></li>
+                                                <li><a href="blog.html">News</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="rooms.html">Rooms</a></li>
+                                                <li><a href="blog.html">News</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                              
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div align="center">
+       <div class="single-hero-slide d-flex align-items-center justify-content-center">
+
+ <div class="col-lg-12">
+   <form method="POST">{%csrf_token%}
+  <div class="row">
+    <div class="col-sm-12 col-md-6"><br><br><br><br><br><br><br><br>
+      <p> 
+
+
+                          <h2>     {{form.as_p}}</h2>
+                                
+                                                           
+                                <input type="Submit" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms" name="submit" value="Submit"></p>
+    </div>
+    <div class="col-sm-12 col-md-5"><br><br><br><br><br><br><br><br>
+      <p>
+<ul>
+    {% for message in messages %}
+    <li class="{{ message.tags }}">
+        {% if 'safe' in message.tags %}
+            {{ message|safe }}
+        {% else %}
+            {{ message }}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul></p>
+    </div>
+  </div>
+  </form>
+  </div>
+
+</div>
+</div>
+
+
+
+        
+
+
+     
+
+    <!-- ##### Hero Area End ##### -->
+
+
+
+
+
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+     
+
+           
+                <!-- Copywrite Text -->
+                <div class="col-12">
+                    <div class="copywrite-text mt-30">
+                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src='{% static "js/jquery/jquery-2.2.4.min.js"%}'></script>
+    <!-- Popper js -->
+    <script src='{% static "js/bootstrap/popper.min.js"%}'></script>
+    <!-- Bootstrap js -->
+    <script src='{% static "js/bootstrap/bootstrap.min.js"%}'></script>
+    <!-- All Plugins js -->
+    <script src='{% static "js/plugins/plugins.js"%}'></script>
+    <!-- Active js -->
+    <script src='{% static "js/active.js"%}'></script>
+</body>
+
+</html>
