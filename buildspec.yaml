@@ -13,7 +13,7 @@ phases:
     commands:
       - echo "in build block"
       - echo "running some tests---mk"
-      - grep -fq "india123" readme.txt
+      - grep -Fq "username" readme.txt
   post_build:
     commands:
       - echo "in the post-build phase"
