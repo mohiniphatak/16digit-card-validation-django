@@ -10,7 +10,6 @@ phases:
     commands:
       - echo "we are in the build phase"
   build:
-    run-as: Linux-user-name
     commands:
       - echo "in build block"
       - echo "running some tests---mk"
